@@ -1,0 +1,9 @@
+extend type Query {
+    balance(filter: BalanceFilter!): Balance! @Auth
+}
+
+input BalanceFilter {
+    addressEq: String!
+    chainEq: String!
+    tokenEq: String!
+}

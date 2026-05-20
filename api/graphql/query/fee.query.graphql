@@ -1,0 +1,13 @@
+extend type Query {
+    fee(filter: FeeFilter): FeePayload! @Auth
+}
+
+input FeeFilter {
+    chainEq: String!
+    gasLimit: Int
+}
+
+type FeePayload {
+    usd_amount: Float!
+    token_amount: Float!
+}

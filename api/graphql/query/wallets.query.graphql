@@ -1,0 +1,11 @@
+extend type Query {
+    wallets(filter: WalletsFilter): WalletsPagination! @Auth
+}
+
+input WalletsFilter {
+    clientIdIn: [String!]
+}
+
+type WalletsPagination {
+    items: [Wallet!]
+}

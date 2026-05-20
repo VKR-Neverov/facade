@@ -1,0 +1,16 @@
+extend type Mutation {
+    transfer(input: TransferInput!): TransferPayload! @Auth
+}
+
+input TransferInput {
+    receiver_address: String
+    receiver_client_id: String
+    gas_limit: Int
+    gas_price: Int
+    token_amount: Float!
+    chain: String!
+}
+
+type TransferPayload {
+    hash: String!
+}

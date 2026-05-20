@@ -1,0 +1,15 @@
+type Transaction @goModel(model: "github.com/fidesy-pay/facade/pkg/crypto-service.Transaction") {
+    id: String!
+    from_address: String!
+    to_address: String!
+    amount: Float!
+    chain: String!
+    token: String!
+    hash: String!
+    created_at: Time!
+
+    sender: ShortClient
+    receiver: ShortClient
+
+    is_client_sender: Boolean!
+}

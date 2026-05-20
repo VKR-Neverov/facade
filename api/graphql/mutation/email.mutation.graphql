@@ -1,0 +1,11 @@
+extend type Mutation {
+    sendEmailOtp(input: SendEmailOtpInput!): SendEmailOtpPayload!
+}
+
+input SendEmailOtpInput {
+    email: String!
+}
+
+type SendEmailOtpPayload {
+    email_code_id: String!
+}

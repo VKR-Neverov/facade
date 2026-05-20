@@ -1,0 +1,5 @@
+type Balance {
+    token: String!
+    balance: Float!
+    usdBalance: Float!
+}

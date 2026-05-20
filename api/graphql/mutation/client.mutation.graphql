@@ -1,0 +1,13 @@
+extend type Mutation {
+    clientMutations: ClientMutations @Auth
+}
+
+type ClientMutations {
+    updateClient(input: UpdateClientInput!): Client!
+    regenerateAPIKey: Client!
+    deactivate: Client!
+}
+
+input UpdateClientInput {
+    is_invoice_notification_enabled: Boolean
+}

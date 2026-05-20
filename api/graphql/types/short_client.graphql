@@ -1,0 +1,5 @@
+type ShortClient @goModel(model: "github.com/fidesy-pay/facade/pkg/clients-service.Client") {
+    id: String!
+    username: String!
+    photo_url: String
+}

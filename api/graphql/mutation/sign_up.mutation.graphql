@@ -1,0 +1,15 @@
+extend type Mutation {
+    signUp(input: SignUpInput!): SignUpPayload!
+}
+
+input SignUpInput {
+    email_code_id: String!
+    email_code: String!
+    username: String!
+    password: String!
+    email: String!
+}
+
+type SignUpPayload {
+    success: Boolean!
+}

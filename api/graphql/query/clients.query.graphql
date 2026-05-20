@@ -1,0 +1,15 @@
+extend type Query {
+    clients(
+        filter: ClientsFilter
+        page: Int! = 1
+        per_page: Int! = 20
+    ): ClientsPagination! @Auth
+}
+
+input ClientsFilter {
+    username_in: [String!]
+}
+
+type ClientsPagination {
+    items: [ShortClient!]
+}

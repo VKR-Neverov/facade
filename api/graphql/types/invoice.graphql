@@ -1,0 +1,11 @@
+type Invoice @goModel(model: "github.com/fidesy-pay/facade/pkg/invoices-service.Invoice") {
+    id: String!
+    usd_amount: Float!
+    token_amount: Float!
+    chain: String!
+    token: String!
+    status: InvoiceStatus!
+    address: String!
+    created_at: Time!
+    payer: Client
+}

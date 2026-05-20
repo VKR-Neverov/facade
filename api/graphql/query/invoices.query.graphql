@@ -1,0 +1,17 @@
+extend type Query {
+    invoices(
+        filter: InvoicesFilter,
+        page: Int! = 1
+        per_page: Int! = 20
+        ): InvoicesPagination! @Auth
+}
+
+input InvoicesFilter {
+    idIn: [String!]
+    clientIdIn: [String!]
+    statusIn: [InvoiceStatus!]
+}
+
+type InvoicesPagination {
+    items: [Invoice!]
+}

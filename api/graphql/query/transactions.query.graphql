@@ -1,0 +1,15 @@
+extend type Query {
+    transactions(
+        filter: TransactionsFilter
+        page: Int! = 1
+        per_page: Int! = 20
+    ): TransactionsPagination! @Auth
+}
+
+input TransactionsFilter {
+    address_in: [String!]
+}
+
+type TransactionsPagination {
+    items: [Transaction!]
+}
